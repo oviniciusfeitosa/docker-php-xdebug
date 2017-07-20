@@ -12,6 +12,7 @@ services:
     environment:
      - APPLICATION_ENV=development
     #xDebug configs for 'development' enviroment
+     - XDEBUG_INSTALL="true"
      - XDEBUG_CONFIG="remote_host=localhost"
      - XDEBUG_REMOTE_ENABLE=on
      - XDEBUG_REMOTE_AUTOSTART=on

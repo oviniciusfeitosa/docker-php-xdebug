@@ -16,7 +16,7 @@ mv composer.phar /usr/local/bin/composer
 
 # X-Debug
 
-if ! [ -v $XDEBUG_REMOTE_ENABLE ] ; then
+if ! [ -v $XDEBUG_REMOTE_ENABLE ] && [ "$XDEBUG_INSTALL" = "true" ] ; then
     echo "[ ****************** ] Starting install of XDebug and dependencies."
     yes | pecl install xdebug
     echo "zend_extension="`find /usr/local/lib/php/extensions/ -iname 'xdebug.so'` > $XDEBUGINI_PATH
