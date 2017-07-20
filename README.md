@@ -1,11 +1,11 @@
 # Docker-php-xdebug
 
-###About 
+### About 
 
 Repo used to help you to create your own image using Dockerfile, docker-compose and entrypoint,
 to make your application works with xDebug PHP Module.
 
-###How to use
+### How to use
 
 Basically you need:
 - rename the file ```docker-compose.yml_sample``` to ```docker-compose.yml```
