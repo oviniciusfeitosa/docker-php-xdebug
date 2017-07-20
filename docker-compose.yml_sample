@@ -1,0 +1,25 @@
+version: '2'
+services:
+  web:
+    build: .
+    image: vinnyfs89/php-composer-xdebug:1.0
+    container_name: php-xdebug
+    ports:
+     - "80:80"
+    volumes:
+     - /var/www/html:/var/www/html
+     - /var/www/html/log/apache2/salic:/var/log/apache2
+    environment:
+     - APPLICATION_ENV=development
+    #xDebug configs for 'development' enviroment
+     - XDEBUG_CONFIG="remote_host=localhost"
+     - XDEBUG_REMOTE_ENABLE=on
+     - XDEBUG_REMOTE_AUTOSTART=on
+     - XDEBUG_REMOTE_CONNECT_BACK=off
+     - XDEBUG_REMOTE_HANDLER=dbgp
+     - XDEBUG_PROFILER_ENABLE=1
+     - XDEBUG_PROFILER_OUTPUT_DIR=/var/www/html
+     - XDEBUG_REMOTE_PORT=9000
+     - XDEBUGINI_PATH=/usr/local/etc/php/conf.d/xdebug.ini
+     - PHP_IDE_CONFIG="serverName=Test"
+    restart: always
