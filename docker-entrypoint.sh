@@ -16,7 +16,7 @@ mv composer.phar /usr/local/bin/composer
 
 # X-Debug
 
-if ! [ -v $XDEBUG_REMOTE_ENABLE ] && [ "$XDEBUG_INSTALL" = "true" ] ; then
+if ! [ -v $XDEBUG_REMOTE_ENABLE ] ; then
 	pecl shell-test xdebug && echo "Package xdebug Installed" || (
 	    echo "[ ****************** ] Starting install of XDebug and dependencies."
 	    yes | pecl install xdebug
