@@ -1,11 +1,11 @@
 # Docker + PHP + XDebug
 
-### About 
+## About 
 
 Repo used to help you to create your own image using Dockerfile, docker-compose and entrypoint,
 to make your application works with xDebug PHP Module.
 
-### How to use
+## How to use
 
 Basically you need:
 
@@ -30,6 +30,6 @@ docker-compose up
 
 :octocat: :smiley: :zap:
 
-## :registered: Referências
+## :registered: References
 - [PHP-DF](https://phpdf.org.br)
 - [Commit Messages Convention (CMC)](https://github.com/devbrotherhood/cmc)
